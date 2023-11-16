@@ -1,0 +1,25 @@
+---
+format:
+  docx:
+    output-file: "table-head"
+    geometry:
+      - top= 1in
+      - left=1in
+      - right=1in
+      - bottom = 1in
+      - heightrounded
+---
+
+```{r, include = F}
+install.packages("gt")
+library(gt)
+```
+
+```{r, echo = F, message = F, warning = F}
+g1 <- gt(head(Theoph)) |> tab_header(
+    title = "Theoph Data")  |>
+   tab_options(heading.align = "center")
+   #opt_align_table_header(align = "center")
+
+g1
+```
