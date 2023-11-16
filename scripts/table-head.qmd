@@ -10,12 +10,10 @@ format:
       - heightrounded
 ---
 
-```{r, include = F}
-install.packages("gt")
-library(gt)
-```
-
 ```{r, echo = F, message = F, warning = F}
+# install.packages("gt")
+library(gt)
+
 g1 <- gt(head(Theoph)) |> tab_header(
     title = "Theoph Data")  |>
    tab_options(heading.align = "center")
